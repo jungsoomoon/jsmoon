@@ -37,18 +37,36 @@ body:not(.home) #header-background, body:not(.home) .home-link {
     font-weight: 300;
     text-decoration: none !important;
 }
-span.button {
+span#header-text-first {
+    display: inline-block;
+    position: relative;
+    font-size: 7em;
+    vertical-align: text-top;
+    color: white;
+    top: -200px;
+}
+span#header-text-second {
+    display: inline-block;
+    position: relative;
+    font-size: 7em;
+    vertical-align: text-top;
+    color: black;
+    top: -200px;
+}
+span#button-header {
     background: #317BC7;
+    position: relative;
     padding: 7px 25px;
     color: #fff;
     font-size: 1.8em;
     border-radius: 5px;
+    bottom: 3em;
   -webkit-transition: transform 0.4s ease-in;
      -moz-transition: transform 0.4s ease-in;
        -o-transition: transform 0.4s ease-in;
           transition: transform 0.4s ease-in;
 }
-span.button:hover {
+span#button-header:hover {
     color: yellow;
   -webkit-transform: rotateX(360deg);
      -moz-transform: rotateX(360deg);
@@ -56,8 +74,38 @@ span.button:hover {
        -o-transform: rotateX(360deg);
           transform: rotateX(360deg);
 }
-
-
+@-webkit-keyframes headerTextUp {
+    0%   {top: -200px;}
+    100% {top: -225px;}
+}
+@keyframes headerTextUp {
+    0%   {top: -200px;}
+    100% {top: -225px;}
+}
+@-webkit-keyframes headerTextUpReverse {
+    0%   {top: -225px;}
+    100% {top: -200px;}
+}
+@keyframes headerTextUpReverse {
+    0%   {top: -225px;}
+    100% {top: -200px;}
+}
+@-webkit-keyframes headerTextDown {
+    0%   {top: -200px;}
+    100% {top: -175px;}
+}
+@keyframes headerTextDown {
+    0%   {top: -200px;}
+    100% {top: -175px;}
+}
+@-webkit-keyframes headerTextDownReverse {
+    0%   {top: -175px;}
+    100% {top: -200px;}
+}
+@keyframes headerTextDownReverse {
+    0%   {top: -175px;}
+    100% {top: -200px;}
+}
 /* menu tweaks */
 form.search-form {
     display: none;
@@ -112,4 +160,66 @@ form.search-form {
 }
 .donation-radio input:checked+.wpcf7-list-item-label {
     background: lightblue;
+}
+
+@media screen and (max-width: 1200px) {
+    span#header-text-first,
+    span#header-text-second {
+        font-size: 5.5em;
+        padding-top: 30px;
+    }
+    span#button-header {
+        bottom: 4em;
+    }
+}
+@media screen and (max-width: 1000px) {
+    span#header-text-first,
+    span#header-text-second {
+        font-size: 4em;
+        padding-top: 50px;
+    }
+}
+@media screen and (max-width: 900px) {
+    span#header-text-first,
+    span#header-text-second {
+        font-size: 3.5em;
+        padding-top: 70px;
+    }
+}
+@media screen and (max-width: 800px) {
+    span#header-text-first,
+    span#header-text-second {
+        font-size: 3em;
+        padding-top: 90px;
+    }
+}
+@media screen and (max-width: 700px) {
+    span#header-text-first,
+    span#header-text-second {
+        font-size: 2.8em;
+        padding-top: 120px;
+    }
+    span#button-header {
+        bottom: 5em;
+    }
+}
+@media screen and (max-width: 500px) {
+    span#header-text-first,
+    span#header-text-second {
+        font-size: 2.2em;
+        padding-top: 140px;
+    }
+    span#button-header {
+        bottom: 5.5em;
+    }
+}
+@media screen and (max-width: 320px) {
+    span#header-text-first,
+    span#header-text-second {
+        font-size: 1.5em;
+        padding-top: 150px;
+    }
+    span#button-header {
+        bottom: 6.5em;
+    }
 }
