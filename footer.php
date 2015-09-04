@@ -25,16 +25,20 @@
 <script>
     $(document).ready(function(){
          $("#button-header").mouseover(function(){
-             $("#header-text-first").css({"-webkit-animation-name": "headerTextDown", "-webkit-animation-duration": "0.5s", "-webkit-animation-fill-mode": "forwards",
-                                            "animation-name": "headerTextDown", "animation-duration": "0.5s", "animation-fill-mode": "forwards"});
-             $("#header-text-second").css({"-webkit-animation-name": "headerTextUp", "-webkit-animation-duration": "0.5s", "-webkit-animation-fill-mode": "forwards",
+             $("#header-text-first").css({"-webkit-animation-name": "headerTextUp", "-webkit-animation-duration": "0.5s", "-webkit-animation-fill-mode": "forwards",
                                             "animation-name": "headerTextUp", "animation-duration": "0.5s", "animation-fill-mode": "forwards"});
+             $("#header-text-second").css({"-webkit-animation-name": "headerTextDown", "-webkit-animation-duration": "0.5s", "-webkit-animation-fill-mode": "forwards",
+                                            "animation-name": "headerTextDown", "animation-duration": "0.5s", "animation-fill-mode": "forwards"});
+             $("#button-header").toggleClass('animated-pulse animated-pulseQuick');
+             $("#button-header").toggleClass('pulse pulseQuick');
          });
          $("#button-header").mouseout(function(){
-             $("#header-text-first").css({"-webkit-animation-name": "headerTextDownReverse", "-webkit-animation-duration": "0.5s", "-webkit-animation-fill-mode": "forwards",
-                                            "animation-name": "headerTextDownReverse", "animation-duration": "0.5s", "animation-fill-mode": "forwards"});
-             $("#header-text-second").css({"-webkit-animation-name": "headerTextUpReverse", "-webkit-animation-duration": "0.5s", "-webkit-animation-fill-mode": "forwards",
+             $("#header-text-first").css({"-webkit-animation-name": "headerTextUpReverse", "-webkit-animation-duration": "0.5s", "-webkit-animation-fill-mode": "forwards",
                                             "animation-name": "headerTextUpReverse", "animation-duration": "0.5s", "animation-fill-mode": "forwards"});
+             $("#header-text-second").css({"-webkit-animation-name": "headerTextDownReverse", "-webkit-animation-duration": "0.5s", "-webkit-animation-fill-mode": "forwards",
+                                            "animation-name": "headerTextDownReverse", "animation-duration": "0.5s", "animation-fill-mode": "forwards"});
+             $("#button-header").toggleClass('animated-pulseQuick animated-pulse');
+             $("#button-header").toggleClass('pulseQuick pulse');
          });
     });
 </script>

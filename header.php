@@ -24,6 +24,7 @@
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
     <![endif]-->
@@ -32,14 +33,14 @@
 <body <?php body_class(); ?>>
     <div id="page" class="hfeed site">
         <header id="masthead" class="site-header" role="banner">
-            <img id="header-background" src="<?php echo esc_url( home_url( '/wp-content/uploads/2015/08/taustaesimerkki2.png' ) ); ?>">
+            <img id="header-background" src="<?php echo esc_url( home_url( '/wp-content/uploads/2015/09/elamayllattaa-banneri-no-text.png' ) ); ?>">
             <a class="home-link" href="<?php echo esc_url( home_url( '/lahjoita/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                 <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
                 <div id="header-text">
-                    <span id="header-text-first">&nbsp;&nbsp;&nbsp;Elämä</span>
-                    <span id="header-text-second">&nbsp;yllättää</span>
+                    <span id="header-text-first">&nbsp;elämä&nbsp;</span>
+                    <span id="header-text-second">yllättää</span>
                 </div>
-                <span id="button-header">Lahjoita nyt</span>
+                <span id="button-header" class="animated-pulse infinite pulse hvr-bounce-to-top"><span id="button-filling">Lahjoita nyt</span></span>
             </a>
 
             <div id="navbar" class="navbar">

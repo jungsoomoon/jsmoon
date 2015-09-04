@@ -40,6 +40,7 @@ body:not(.home) #header-background, body:not(.home) .home-link {
 span#header-text-first {
     display: inline-block;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
     font-size: 7em;
     vertical-align: text-top;
     color: white;
@@ -48,7 +49,9 @@ span#header-text-first {
 span#header-text-second {
     display: inline-block;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
     font-size: 7em;
+    font-weight: lighter;
     vertical-align: text-top;
     color: black;
     top: -200px;
@@ -58,21 +61,12 @@ span#button-header {
     position: relative;
     padding: 7px 25px;
     color: #fff;
-    font-size: 1.8em;
+    font-size: 2.8em;
     border-radius: 5px;
     bottom: 3em;
-  -webkit-transition: transform 0.4s ease-in;
-     -moz-transition: transform 0.4s ease-in;
-       -o-transition: transform 0.4s ease-in;
-          transition: transform 0.4s ease-in;
 }
 span#button-header:hover {
-    color: yellow;
-  -webkit-transform: rotateX(360deg);
-     -moz-transform: rotateX(360deg);
-      -ms-transform: rotateX(360deg);
-       -o-transform: rotateX(360deg);
-          transform: rotateX(360deg);
+    color: #FFCF00;
 }
 @-webkit-keyframes headerTextUp {
     0%   {top: -200px;}
@@ -170,6 +164,7 @@ form.search-form {
     }
     span#button-header {
         bottom: 4em;
+        font-size: 2.3em;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -177,6 +172,41 @@ form.search-form {
     span#header-text-second {
         font-size: 4em;
         padding-top: 50px;
+    }
+    span#button-header {
+        font-size: 2em;
+    }
+    @-webkit-keyframes headerTextUp {
+        0%   {top: -200px;}
+        100% {top: -215px;}
+    }
+    @keyframes headerTextUp {
+        0%   {top: -200px;}
+        100% {top: -215px;}
+    }
+    @-webkit-keyframes headerTextUpReverse {
+        0%   {top: -215px;}
+        100% {top: -200px;}
+    }
+    @keyframes headerTextUpReverse {
+        0%   {top: -215px;}
+        100% {top: -200px;}
+    }
+    @-webkit-keyframes headerTextDown {
+        0%   {top: -200px;}
+        100% {top: -185px;}
+    }
+    @keyframes headerTextDown {
+        0%   {top: -200px;}
+        100% {top: -185px;}
+    }
+    @-webkit-keyframes headerTextDownReverse {
+        0%   {top: -185px;}
+        100% {top: -200px;}
+    }
+    @keyframes headerTextDownReverse {
+        0%   {top: -185px;}
+        100% {top: -200px;}
     }
 }
 @media screen and (max-width: 900px) {
@@ -192,6 +222,10 @@ form.search-form {
         font-size: 3em;
         padding-top: 90px;
     }
+    span#button-header {
+        bottom: 5em;
+        font-size: 1.8em;
+    }
 }
 @media screen and (max-width: 700px) {
     span#header-text-first,
@@ -200,7 +234,8 @@ form.search-form {
         padding-top: 120px;
     }
     span#button-header {
-        bottom: 5em;
+        font-size: 1.3em;
+        bottom: 7em;
     }
 }
 @media screen and (max-width: 500px) {
@@ -210,16 +245,190 @@ form.search-form {
         padding-top: 140px;
     }
     span#button-header {
-        bottom: 5.5em;
+        bottom: 8.5em;
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 400px) {
+    span#header-text-first,
+    span#header-text-second {
+        font-size: 2.2em;
+        padding-top: 140px;
+    }
+    span#button-header {
+        bottom: 10.5em;
+        font-size: 1em;
     }
 }
 @media screen and (max-width: 320px) {
     span#header-text-first,
     span#header-text-second {
-        font-size: 1.5em;
-        padding-top: 150px;
+        font-size: 1.7em;
+        padding-top: 160px;
     }
     span#button-header {
-        bottom: 6.5em;
+        bottom: 14em;
+        font-size: 0.8em;
     }
+}
+@media screen and (max-width: 222px) {
+    span#header-text-second {
+        font-size: 1.7em;
+        padding-top: 0px;
+    }
+    span#button-header {
+        bottom: 14em;
+        font-size: 0.8em;
+    }
+}
+
+/*!
+Animate.css - http://daneden.me/animate
+*/
+
+.animated-pulse {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated-pulseQuick {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated-pulse.infinite {
+  -webkit-animation-iteration-count: infinite;zx
+  animation-iteration-count: infinite;
+}
+.animated-pulseQuick.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  4% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  15% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes pulseQuick {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.02, 1.02, 1.02);
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+
+  60% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulseQuick {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(1.02, 1.02, 1.02);
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+
+  60% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-delay:2s;
+  animation-delay:2s;
+}
+
+.pulseQuick {
+  -webkit-animation-name: pulseQuick;
+  animation-name: pulseQuick;    
 }
